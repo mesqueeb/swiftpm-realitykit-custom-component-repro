@@ -1,0 +1,16 @@
+#usda 1.0
+(
+    defaultPrim = "Root"
+)
+
+def Xform "Root"
+{
+    def Xform "Payload"
+    {
+        def RealityKitCustomComponent "RealityKitCustomComponentDecodeRepro_ReproComponent"
+        {
+            uniform token info:id = "RealityKitCustomComponentDecodeRepro.ReproComponent"
+            string marker = "from_usd"
+        }
+    }
+}
