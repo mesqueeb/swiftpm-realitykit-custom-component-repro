@@ -2,6 +2,12 @@
 
 in SwiftPM CLI tests, RealityKit custom components are detected by `has(...)` but typed decoding via `components[...]` returns nil.
 
+In other words when a custom RealityKit component is present (eg. `ReproComponent`) in swift testing we observe:
+
+- ✅ `entity.components.has(ReproComponent.self)` → `true`
+- ❌ `entity.components[ReproComponent.self]`        → `nil`
+  (expected: a `ReproComponent` value)
+
 ## Bug reproduction steps
 
 ```bash
